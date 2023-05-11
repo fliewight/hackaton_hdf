@@ -1,4 +1,4 @@
-const URL = 'http://localhost/';
+const URL = 'http://localhost:8000/';
 let one = document.querySelector("#one");
 let two = document.querySelector("#two");
 let three = document.querySelector("#three");
