@@ -8,14 +8,14 @@
 // e.g route '/item/edit?id=1' will execute $itemController->edit(1)
 return [
     '' => ['HomeController', 'index',],
-    'Lille' => ['VilleController', 'Lille',],
     'Lens' => ['VilleController', 'Lens',],
     'Arras' => ['VilleController', 'Arras',],
+    'amiens' => ['VilleController', 'amiens',],
     'Dunkerque' => ['VilleController', 'Dunkerque',],
-    'Bergues' => ['VilleController', 'Bergues',],
     'Berck' => ['VilleController', 'Berck',],
     'Cambrai' => ['VilleController', 'Cambrai',],
-    'Calais' => ['VilleController', 'Calais',],
+    'Calais' => ['VilleController', 'calais',],
+    'Lille' => ['VilleController', 'Lille',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],

@@ -24,10 +24,7 @@ class VilleController extends AbstractController
     {
         return $this->twig->render('Home/berck.html.twig');
     }
-    public function bergues(): string
-    {
-        return $this->twig->render('Home/bergues.html.twig');
-    }
+
     public function cambrai(): string
     {
         return $this->twig->render('Home/cambrai.html.twig');
@@ -36,4 +33,9 @@ class VilleController extends AbstractController
     {
         return $this->twig->render('Home/calais.html.twig');
     }
+    public function amiens(): string
+    {
+        return $this->twig->render('Home/amiens.html.twig');
+
+}
 }
