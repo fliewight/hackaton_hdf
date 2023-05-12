@@ -19,7 +19,7 @@ function receiveTemperature(city)
         if (request.readyState == XMLHttpRequest.DONE) {    
             if (request.status === 200) {
                 let temp = request.response.main.temp;
-                let city =  request.response.name;
+                //let city =  request.response.name;
                 let icone = request.response.weather[0].icon;
                 
                 let img = document.createElement('img');

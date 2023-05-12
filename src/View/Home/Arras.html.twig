@@ -1,20 +1,22 @@
 {% extends 'layout.html.twig' %}
 
-
-
-
 {% block stylesheet %}
 <link rel="stylesheet" href="/assets/css/ville2.css">
+<link rel="stylesheet" href="/assets/css/api.css">
 {% endblock %}
 
 {% block content %}
 
 	<div id="container">
 		<div class="slide anim-in">
-        <h1>Arras</h1>
+        	<h1>La météo à Arras</h1>
 			<div class="images" style="background-image: url('/assets/img/Arras/627cd4c13daedbe33d0bf3d8dcd756e9.jpg')"></div>
-			<div class="overlay"></div>
+			
 			<div class="cont">
+				<p id="temp">
+					<span id="city"></span><br>
+					Température : <span id="temperature_label"></span> °C
+				</p>
 			</div>
 		</div>
 		<div class="slide anim-in">
