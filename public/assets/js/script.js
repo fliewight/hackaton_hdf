@@ -37,6 +37,15 @@ let btn = document.getElementById("spin");
 let number = Math.ceil(Math.random() * 1000);
 
 btn.onclick = function () {
-	container.style.transform = "rotate(" + number + "deg)";
-	number += Math.ceil(Math.random() * 1000);
-}
+
+    let part = Math.round(number/45) % 8;
+    const pieces = container.querySelectorAll('div');
+    const pieceSelected = pieces[part];
+    setTimeout( function() {
+      const message = 'Alexis, la pièce choisie contient la classe ' + pieceSelected.getAttribute('class') + ' 😛';
+      alert(message)
+    }, 5000);
+
+      container.style.transform = "rotate(-" + number + "deg)";
+      number += Math.ceil(Math.random() * 1000);
+  }
