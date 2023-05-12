@@ -3,6 +3,7 @@
 
 {% block stylesheet %}
 <link rel="stylesheet" href="/assets/css/ville2.css">
+<link rel="stylesheet" href="/assets/css/api.css">
 {% endblock %}
 
 
@@ -10,12 +11,14 @@
 <div id="container">
 
 		<div class="slide anim-in">
-        <h1>Lens</h1>
+        <h1 id="meteo">La météo à Lille</h1>
 			<div class="images" style="background-image: url(/assets/img/lens/OIP.jpg)"></div>
-			<div class="overlay"></div>
+			
 			<div class="cont">
-
-
+				<p id="temp">
+					<span id="city"></span><br>
+					Température : <span id="temperature_label"></span> °C
+				</p>
 			</div>
 		</div>
 
