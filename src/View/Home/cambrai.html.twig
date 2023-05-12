@@ -1,19 +1,22 @@
 {% extends 'layout.html.twig' %}
 
-{% block stylesheet %}<link rel="stylesheet" href="/assets/css/ville2.css">
-
-
+{% block stylesheet %}
+<link rel="stylesheet" href="/assets/css/ville2.css">
+<link rel="stylesheet" href="/assets/css/api.css">
 {% endblock %}
 
 {% block content %}
 
 	<div id="container">
 			<div class="slide anim-in">
-        <h1>Cambrai</h1>
+			<h1 id="meteo">La météo à Cambrai</h1>
 			<div class="images" style="background-image: url('/assets/img/cambrai/OIP (1).jpg')"></div>
-			<div class="overlay"></div>
+			
 			<div class="cont">
-
+				<p id="temp">
+					<span id="city"></span><br>
+					Température : <span id="temperature_label"></span> °C
+				</p>
 			</div>
 		</div>
 		<div class="slide anim-in">
