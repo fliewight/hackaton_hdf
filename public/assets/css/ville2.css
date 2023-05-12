@@ -16,6 +16,7 @@ html, body {
     align-items: center;
     height: 100%;
     width: 100%;
+
   }
 
   .slide {
@@ -178,6 +179,7 @@ html, body {
     left: 0;
     height: 100%;
     width: 100%;
+    opacity: 0;
     pointer-events: none;
   }
   .slide .content .title {
@@ -190,7 +192,7 @@ html, body {
     text-align: center;
     text-shadow: 0 2px 2px #2f2f2f;
     color: #3f3f3f;
-    opacity: 0;
+
     pointer-events: none;
     transition: all 0.5s;
   }
@@ -284,8 +286,12 @@ html, body {
     opacity: 0.6;
   }
   .slide:hover:not(.active):not(.anim-out) .content .title {
-    opacity: 1;
+
     transform: translateY(30px);
+  }
+  .slide:hover:not(.active):not(.anim-out) .content {
+    opacity: 1;
+
   }
   .slide:hover:not(.active):not(.anim-out) .content .title:after {
     height: 100%;

@@ -36,6 +36,5 @@ class VilleController extends AbstractController
     public function amiens(): string
     {
         return $this->twig->render('Home/amiens.html.twig');
-
-}
+    }
 }
