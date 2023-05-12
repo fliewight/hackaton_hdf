@@ -17,7 +17,7 @@ three.onclick = function () {
     document.location.href = URL+"Amiens";
 }
 four.onclick = function () {
-    document.location.href = URL+"Dunkercques";
+    document.location.href = URL+"Dunkerque";
 }
 five.onclick = function () {
     document.location.href = URL+"Lens";
@@ -44,8 +44,6 @@ btn.onclick = function () {
         const pieceSelected = pieces[part];
         setTimeout(function () {
             pieceSelected.setAttribute('id', 'selected');
-            let redirect = 'window.location = "http://www.un-site.com/une-page.htm"';
-            setTimeout(redirect,1);
         }, 5000);
 
         container.style.transform = "rotate(-" + number + "deg)";
