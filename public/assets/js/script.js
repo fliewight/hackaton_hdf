@@ -38,17 +38,43 @@ let btn = document.getElementById("spin");
 let number = Math.ceil(Math.random() * 1000);
 
 btn.onclick = function () {
-    btn.onclick = function () {
-        let part = Math.round(number / 45) % 8;
-        const pieces = cover.querySelectorAll('div.hidden');
-        const pieceSelected = pieces[part];
-        setTimeout(function () {
-            pieceSelected.setAttribute('id', 'selected');
-            let redirect = 'window.location = "http://www.un-site.com/une-page.htm"';
-            setTimeout(redirect,1);
-        }, 5000);
+    btn.onclick = null; // Remove the click handler after it's been triggered once
+    let part = Math.round(number / 45) % 8;
+    const pieces = cover.querySelectorAll('div.hidden');
+    const pieceSelected = pieces[part];
+    setTimeout(function () {
+        pieceSelected.setAttribute('id', 'selected');
+        switch (part + 1) {
+            case 1:
+                window.location.href = 'http://www.example.com/page1';
+                break;
+            case 2:
+                window.location.href = 'http://www.example.com/page2';
+                break;
+            case 3:
+                window.location.href = 'http://www.example.com/page3';
+                break;
+            case 4:
+                window.location.href = 'http://www.example.com/page4';
+                break;
+            case 5:
+                window.location.href = 'http://www.example.com/page5';
+                break;
+            case 6:
+                window.location.href = 'http://www.example.com/page6';
+                break;
+            case 7:
+                window.location.href = 'http://www.example.com/page7';
+                break;
+            case 8:
+                window.location.href = 'http://www.example.com/page8';
+                break;
+            default:
+                break;
+        }
+    }, 5000);
 
-        container.style.transform = "rotate(-" + number + "deg)";
-        number += Math.ceil(Math.random() * 1000);
-    }
+    container.style.transform = "rotate(-" + number + "deg)";
+    number += Math.ceil(Math.random() * 1000);
 }
+
