@@ -4,17 +4,31 @@
 
 {% block content %}
 <h1>A la découverte des Hauts-de-France :</h1>
-	<button id="spin">GO</button>
-	<span class="arrow"></span>
-	<div class="container">
-		<div class="one" id="one"></div>
-		<div class="two" id="two"></div>
-		<div class="three" id="three"></div>
-		<div class="four" id="four"></div>
-		<div class="five" id="five"></div>
-		<div class="six" id="six"></div>
-		<div class="seven" id="seven"></div>
-		<div class="eight" id="eight"></div>
-	</div>
+    <button id="spin">GO</button>
+    <span class="arrow"></span>
+    <div class="container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+        <div class="seven"></div>
+        <div class="eight"></div>
+    </div>
+    <div class="cover">
+        <div class="hidden one" id="one"></div>
+        <div class="hidden two" id="two"></div>
+        <div class="hidden three" id="three"></div>
+        <div class="hidden four" id="four"></div>
+        <div class="hidden five" id="five"></div>
+        <div class="hidden six" id="six"></div>
+        <div class="hidden seven" id="seven"></div>
+        <div class="hidden eight" id="eight"></div>
+    </div>
     <p>Clique sur l'image pour découvrir ch'nord</p>
+    <audio controls>
+  <source src="/assets/song/min_coin.mp3" type="audio/mp3">
+  Votre navigateur ne supporte pas la lecture de fichiers audio.
+</audio>
 {% endblock %}

@@ -1,183 +1,257 @@
-
 @import 'api.css';
 
-*{
-	box-sizing:border-box;
-    background-image: url("/assets/images/img_bg.png");
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:white;
-    background-color: rgba(0,0,0,5);
+* {
+	box-sizing: border-box;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	color: white;
+		/* background-color: rgba(0,0,0,5); */
 }
 
 h1 {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    background: none;
-    font-weight: bold;
-    font-size: xx-large;
+	position: absolute;
+		top: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		color: white;
+		background: none;
+		font-weight: bold;
+		font-size: xx-large;
 }
 
-body{
-	margin:0;
-	padding:0;
-	display:flex;
-	align-items:center;
+body {
+	background-image: url("/assets/images/img_bg.png");
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
 	justify-content: center;
-	height:100vh;
-	overflow:hidden;
+	height: 100vh;
+		overflow: hidden;
 }
 
-.container{
-	width:500px;
-	height:500px;
-	border-radius:50%;
-	border:15px solid #dde;
+.cover {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	border: 15px solid #dde;
+	position: absolute;
+}
+
+.hidden {
+	transition: opacity 1s ease, height 2s ease, width 2s ease;
+	opacity: 0%;
+	border-radius: 20px;
+	height: 50%;
+	width: 200px;
+	position: absolute;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: sans-serif;
+	transform-origin: center;
+	color: #fff;
+}
+
+#selected {
+	opacity: 100%;
+	border-radius: 44%;
+	height: 130%;
+	width: 115%;
+	bottom: 0%;
+	z-index: 11;
+}
+
+.container {
+	width: 500px;
+	height: 500px;
+	border-radius: 50%;
+	border: 15px solid #dde;
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */
 	transition: 5s;
 }
 
-.container div{
-	height:50%;
-	width:200px;
+.container div {
+	border-radius: 20px;
+	height: 50%;
+	width: 200px;
 	position: absolute;
-	clip-path: polygon(100% 0 , 50% 100% , 0 0 );
-	transform:translateX(-50%);
-	transform-origin:bottom;
-	text-align:center;
-	display:flex;
+	clip-path: polygon(100% 0, 50% 100%, 0 0);
+		transform: translateX(-50%);
+		transform-origin: bottom;
+		text-align: center;
+		display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size:20px;
-	font-weight:bold;
-	font-family:sans-serif;
-	color:#fff;
-	left:135px;
+	font-size: 20px;
+		font-weight: bold;
+		font-family: sans-serif;
+		color: #fff;
+		left: 135px;
 }
 
 
 .one {
-    background-image: url("/assets/images/berck.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-image: url("/assets/images/berck.jpeg");
+		background-repeat: no-repeat;
+		background-size: cover;
 }
 
 .two {
-    background-image: url("/assets/images/beffroi.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+	background-image: url("/assets/images/ARRAS.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
 
-  .three {
-      background-image: url("/assets/images/bergues.PNG");
-    background-repeat: no-repeat;
-    background-size: cover;
+.three {
+	background-image: url("/assets/images/amiens.PNG");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .four {
-    background-image: url("/assets/images/plage_dk.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-.five{
-    background-image: url("/assets/images/rcl.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-  .six{
-      background-image: url("/assets/images/stade_lille.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-  }
-
-.seven{
-    background-image: url("/assets/images/cambrai_night.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-image: url("/assets/images/dunkerque.jpg");
+		background-repeat: no-repeat;
+		background-size: cover;
+	filter: brightness(40%);
 }
 
-.eight{
-    background-image: url("/assets/images/maroille.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+.five {
+	background-image: url("/assets/images/rcl.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.container .one{
-    left:50%;
+.six {
+	background-image: url("/assets/images/losc.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.container .two{
-    transform: rotate(45deg);
+.seven {
+	background-image: url("/assets/images/cambrai_night.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-.container .three{
-	transform:rotate(90deg);
+
+.eight {
+	background-image: url("/assets/images/calais.PNG");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
-.container .four{
+
+.container .one {
+	left: 50%;
+}
+
+.container .two {
+	transform: rotate(45deg);
+}
+.container .three {
+	transform: rotate(90deg);
+}
+.container .four {
 	transform: rotate(135deg);
 }
-.container .five{
+.container .five {
 	transform: rotate(180deg);
 }
-.container .six{
+.container .six {
 	transform: rotate(225deg);
 }
-.container .seven{
+.container .seven {
 	transform: rotate(270deg);
 }
-.container .eight{
+.container .eight {
 	transform: rotate(315deg);
 }
 
-.arrow{
+.arrow {
 	position: absolute;
-	top:17%;
-	left:50%;
+	top: 17%;
+		left: 50%;
 	transform: translateX(-50%);
-	color:white;
-    background: none;
+	color: white;
+		background: none;
 }
 
-.arrow::before{
-	content:"\1F817";
-	font-size:50px;
+.arrow::before {
+	content: "\1F817";
+	font-size: 50px;
 }
 
-#spin{
+#spin {
 	position: absolute;
-	top:50%;
-	left:50%;
-	transform:translate(-50%,-50%);
-	z-index:10;
+	top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 10;
 	background-color: #e2e2e2;
 	text-transform: uppercase;
-	border:8px solid #fff;
-	font-weight:bold;
-	font-size:20px;
-	color:white;
+	border: 8px solid #fff;
+		font-weight: bold;
+		font-size: 20px;
+		color: white;
 	width: 80px;
-	height:80px;
-    font-weight: bold;
-	border-radius:50%;
+	height: 80px;
+		font-weight: bold;
+	border-radius: 50%;
 	cursor: pointer;
-	outline:none;
+	outline: none;
 	letter-spacing: 1px;
 }
 
 p {
-position: absolute;
-bottom: 15%;
-left: 0;
-right: 0;
-text-align: center;
-background: none;
-font-weight: bold;
-font-size: xx-large;
+	position: absolute;
+		bottom: 15%;
+		left: 0;
+		right: 0;
+		text-align: center;
+		background: none;
+		font-weight: bold;
+		font-size: xx-large;
 }
 
+.cover {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 15px solid #dde;
+    position: absolute;
+}
+
+.hidden {
+    transition: opacity 1s ease, height 4s ease, width 4ss ease;
+    opacity: 0%;
+    border-radius: 20px;
+    height: 50%;
+    width: 200px;
+    position: absolute;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    transform-origin: center;
+}
+
+audio {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+
+  }
