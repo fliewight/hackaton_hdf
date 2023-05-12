@@ -11,10 +11,10 @@ one.onclick = function () {
     document.location.href = URL+"Berck";
 }
 two.onclick = function () {
-    document.location.href = URL+"Beffroi";
+    document.location.href = URL+"Arras";
 }
 three.onclick = function () {
-    document.location.href = URL+"Bergues";
+    document.location.href = URL+"Amiens";
 }
 four.onclick = function () {
     document.location.href = URL+"Dunkercques";
@@ -29,7 +29,7 @@ seven.onclick = function () {
     document.location.href = URL+"Cambrai";
 }
 eight.onclick = function () {
-    document.location.href = URL+"Maroilles";
+    document.location.href = URL+"Calais";
 }
 
 let container = document.querySelector(".container");
@@ -44,6 +44,8 @@ btn.onclick = function () {
         const pieceSelected = pieces[part];
         setTimeout(function () {
             pieceSelected.setAttribute('id', 'selected');
+            let redirect = 'window.location = "http://www.un-site.com/une-page.htm"';
+            setTimeout(redirect,1);
         }, 5000);
 
         container.style.transform = "rotate(-" + number + "deg)";

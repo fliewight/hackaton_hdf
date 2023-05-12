@@ -36,10 +36,3 @@ function receiveTemperature(city)
         
     }    
 }
-
-let button = document.querySelector('#change');
-button.addEventListener('click', () => {
-    let cityChoice = city;
-    cityChoice = prompt('Quelle ville souhaitez-vous choisir ?');
-    receiveTemperature(cityChoice);
-})
