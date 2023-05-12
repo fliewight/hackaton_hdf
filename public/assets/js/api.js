@@ -1,4 +1,7 @@
-let city = 'Lens';
+// On récupère le pathname de l'adresse URL courante
+let pathname = window.location.pathname;
+// On retire le slash pour récupérer que la ville
+let city = pathname.replace("/", "");
 
 receiveTemperature(city);
 
@@ -22,17 +25,12 @@ function receiveTemperature(city)
                 let img = document.createElement('img');
                 img.src = 'https://openweathermap.org/img/wn/'+icone+'@2x.png';
 
-                let selectCity = document.querySelector('#city')
-                selectCity.innerHTML = '<h2>' + city + '</h2>';
+                let selectCity = document.querySelector('#city');
                 selectCity.append(img);
 
                 let selectTemp = document.querySelector('#temperature_label')
                 selectTemp.textContent = temp;
-            }    
-            else {
-                alert('La ville que vous avez saisie n\'existe pas !');
-            }    
-        }    
-        
-    }    
+            }
+        }
+    }
 }

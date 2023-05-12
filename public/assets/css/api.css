@@ -1,4 +1,11 @@
-header, main {
-    display: flex;
-    flex-direction: column;
+#temp {
+    color: #fff;
+    text-align: left;
+}
+
+.displayTemp {
+    text-align: left;
+    border: none;
+    height: auto;
+    width: auto;
 }
