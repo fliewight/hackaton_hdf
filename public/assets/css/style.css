@@ -232,7 +232,7 @@ p {
 }
 
 .hidden {
-    transition: opacity 1s ease, height 100s ease, width 100s ease;
+    transition: opacity 1s ease, height 4s ease, width 4ss ease;
     opacity: 0%;
     border-radius: 20px;
     height: 50%;
